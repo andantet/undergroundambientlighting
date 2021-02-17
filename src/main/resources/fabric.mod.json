@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "undergroundambientlighting",
+  "version": "${version}",
+  "name": "Underground Ambient Lighting",
+  "description": "Increases the ambient lighting underground...",
+  "authors": [
+    "Andante",
+    "Adammrr"
+  ],
+  "contact": {
+    "homepage": "https://github.com/andantedevs/undergroundambientlighting",
+    "issues": "https://github.com/andantedevs/undergroundambientlighting/issues"
+  },
+  "license": "MIT",
+  "icon": "pack.png",
+  "environment": "client",
+  "entrypoints": {},
+  "mixins": [
+    "undergroundambientlighting.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.11.1",
+    "minecraft": ">=1.17-alpha.21.6.a"
+  }
+}

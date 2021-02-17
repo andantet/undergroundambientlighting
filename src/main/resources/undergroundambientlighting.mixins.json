@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "me.andante.undergroundambientlighting",
+  "compatibilityLevel": "JAVA_8",
+  "client": [
+    "LightmapTextureManagerMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
