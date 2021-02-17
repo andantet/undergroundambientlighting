@@ -13,17 +13,16 @@ public abstract class LightmapTextureManagerMixin {
     @Shadow @Final private MinecraftClient client;
 
     @ModifyVariable(method = "update", ordinal = 5, at = @At(value = "STORE", ordinal = 0))
-    private float applyUndergroundAmbientLight(float garbage) {
+    private float applyUndergroundAmbientLight(float l) {
+        assert this.client.player != null;
         double playerY = this.client.player.getY();
-        double minY = -10.0D;
         double maxY = 32.0D;
 
-        float l = 0.0F; // Default
         if (playerY <= maxY) {
-            l = 0.06F;
-            if (playerY >= minY) {
-                l *= (float) ((Math.cos((playerY - minY) / ((maxY - minY) / Math.PI)) + 1) / 2);
-            }
+            double minY = -10.0D;
+
+            l = 0.057F;
+            if (playerY >= minY) l *= (float) ((Math.cos((playerY - minY) / ((maxY - minY) / Math.PI)) + 1) / 2);
         }
 
         return l;
