@@ -1,0 +1,14 @@
+{
+  "mod.undergroundambientlighting.name": "Underground Ambient Lighting",
+
+  "config.undergroundambientlighting.title": "Underground Ambient Lighting",
+  "config.undergroundambientlighting.category.misc": "Miscellaneous",
+  "config.undergroundambientlighting.category.misc.enabled": "Enabled",
+  "config.undergroundambientlighting.category.misc.enabled.tooltip": "Enable or disable the entire mod",
+  "config.undergroundambientlighting.category.misc.start_y": "Starting Y level",
+  "config.undergroundambientlighting.category.misc.start_y.tooltip": "The Y level at which the effect begins to fade in",
+  "config.undergroundambientlighting.category.misc.end_y": "End Y level",
+  "config.undergroundambientlighting.category.misc.end_y.tooltip": "The Y level at which the effect becomes strongest",
+  "config.undergroundambientlighting.category.misc.intensity": "Intensity",
+  "config.undergroundambientlighting.category.misc.intensity.tooltip": "The intensity of the effect"
+}

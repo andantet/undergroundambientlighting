@@ -15,7 +15,14 @@
   "license": "MIT",
   "icon": "pack.png",
   "environment": "client",
-  "entrypoints": {},
+  "entrypoints": {
+    "client": [
+      "me.andante.undergroundambientlighting.UndergroundAmbientLighting"
+    ],
+    "modmenu": [
+      "me.andante.undergroundambientlighting.UALModMenu"
+    ]
+  },
   "mixins": [
     "undergroundambientlighting.mixins.json"
   ],

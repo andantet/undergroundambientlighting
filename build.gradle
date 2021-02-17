@@ -20,12 +20,21 @@ if (System.env.CI == "true") {
 }
 
 minecraft {}
-repositories {}
+repositories {
+    maven { url = "https://maven.terraformersmc.com/releases" }
+    maven { url "https://maven.shedaniel.me/" }
+}
 
 dependencies {
     minecraft "com.mojang:minecraft:${project.minecraft_version}"
     mappings "net.fabricmc:yarn:${project.minecraft_version}+build.${project.yarn_build}:v2"
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+
+    modImplementation "com.terraformersmc:modmenu:${project.mod_menu_version}"
+    modRuntime "com.terraformersmc:modmenu:${project.mod_menu_version}"
+
+    modImplementation "me.shedaniel.cloth:cloth-config:${project.cloth_config_version}:fabric"
+    include "me.shedaniel.cloth:cloth-config:${project.cloth_config_version}:fabric"
 }
 
 processResources {
