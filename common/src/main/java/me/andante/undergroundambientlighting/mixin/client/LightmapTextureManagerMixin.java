@@ -1,6 +1,6 @@
 package me.andante.undergroundambientlighting.mixin.client;
 
-import me.andante.undergroundambientlighting.client.UAL;
+import me.andante.undergroundambientlighting.client.UALClient;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.LightmapTextureManager;
 import org.spongepowered.asm.mixin.Final;
@@ -15,7 +15,7 @@ public abstract class LightmapTextureManagerMixin {
 
     @ModifyVariable(method = "update", ordinal = 5, at = @At(value = "STORE", ordinal = 0))
     private float applyUndergroundAmbientLight(float original) {
-        if (UAL.isEnabled()) {
+        if (UALClient.isEnabled()) {
             assert this.client.player != null;
             double playerY = this.client.player.getY();
             int startY = 63;

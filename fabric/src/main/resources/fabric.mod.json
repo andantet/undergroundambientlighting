@@ -16,7 +16,7 @@
   "environment": "*",
   "entrypoints": {
     "client": [
-        "me.andante.undergroundambientlighting.fabric.client.UALFabricClient"
+      "me.andante.undergroundambientlighting.fabric.client.UALClientFabric"
     ]
   },
   "mixins": [

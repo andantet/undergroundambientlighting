@@ -12,7 +12,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.lwjgl.glfw.GLFW;
 
-public class UALForgeClient implements AbstractPlatform {
+public class UALClientForge implements AbstractPlatform {
     private static final KeyBinding keyBinding = new KeyBinding(
             "key." + UndergroundAmbientLightingCore.MOD_ID + ".undergroundambientlighting",
             GLFW.GLFW_KEY_I,
@@ -21,7 +21,7 @@ public class UALForgeClient implements AbstractPlatform {
 
     private UndergroundAmbientLightingCore core;
 
-    public UALForgeClient() {
+    public UALClientForge() {
         this.core = new UndergroundAmbientLightingCore(this);
 
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::onClientSetup);

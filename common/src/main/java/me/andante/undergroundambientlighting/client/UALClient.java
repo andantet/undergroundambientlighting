@@ -10,7 +10,7 @@ import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class UAL {
+public class UALClient {
     public static final String MOD_ID = "undergroundambientlighting";
     public static final String MOD_NAME = "Underground Ambient Lighting";
 
@@ -25,9 +25,9 @@ public class UAL {
     private static final TranslatableText TEXT_TOGGLE_ENABLED = new TranslatableText(TEXT_TOGGLE, new TranslatableText(TEXT_TOGGLE + ".enabled").formatted(Formatting.GRAY));
     private static final TranslatableText TEXT_TOGGLE_DISABLED = new TranslatableText(TEXT_TOGGLE, new TranslatableText(TEXT_TOGGLE + ".disabled").formatted(Formatting.GRAY));
 
-    public UAL(AbstractPlatform platform) {
+    public UALClient(AbstractPlatform platform) {
         log("Initializing");
-        UAL.platform = platform;
+        UALClient.platform = platform;
         log("Initialized");
     }
 
@@ -35,19 +35,19 @@ public class UAL {
         ClientPlayerEntity player = client.player;
         if (player == null) return;
 
-        if (platform.isUALKeyPressed() && !UAL.keyWasDown) {
+        if (platform.isUALKeyPressed() && !UALClient.keyWasDown) {
             keyWasDown = true;
-            UAL.enabled = !UAL.enabled;
+            UALClient.enabled = !UALClient.enabled;
 
-            player.sendMessage(UAL.enabled ? TEXT_TOGGLE_ENABLED : TEXT_TOGGLE_DISABLED, true);
-            player.playSound(UAL.enabled ? SoundEvents.BLOCK_TRIPWIRE_CLICK_OFF : SoundEvents.BLOCK_TRIPWIRE_CLICK_ON, 0.5f, UAL.enabled ? 1.0f : 0.75f);
-        } else if (!platform.isUALKeyPressed() && UAL.keyWasDown) {
-            UAL.keyWasDown = false;
+            player.sendMessage(UALClient.enabled ? TEXT_TOGGLE_ENABLED : TEXT_TOGGLE_DISABLED, true);
+            player.playSound(UALClient.enabled ? SoundEvents.BLOCK_TRIPWIRE_CLICK_OFF : SoundEvents.BLOCK_TRIPWIRE_CLICK_ON, 0.5f, UALClient.enabled ? 1.0f : 0.75f);
+        } else if (!platform.isUALKeyPressed() && UALClient.keyWasDown) {
+            UALClient.keyWasDown = false;
         }
     }
 
     public static boolean isEnabled() {
-        return UAL.enabled;
+        return UALClient.enabled;
     }
 
     public static void log(String message) {
