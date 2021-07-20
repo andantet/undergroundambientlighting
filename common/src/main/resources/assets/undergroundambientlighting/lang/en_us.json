@@ -1,0 +1,9 @@
+{
+    "undergroundambientlighting.discord": "Discord",
+
+    "key.category.undergroundambientlighting": "Underground Ambient Lighting",
+    "key.undergroundambientlighting.undergroundambientlighting": "Toggle Mod",
+    "text.undergroundambientlighting.toggle": "[UAL] %s",
+    "text.undergroundambientlighting.toggle.enabled": "Enabled",
+    "text.undergroundambientlighting.toggle.disabled": "Disabled"
+}

@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "undergroundambientlighting",
+  "version": "${version}",
+  "name": "Underground Ambient Lighting",
+  "description": "Increases the ambient lighting underground very slightly, which unnoticeably increases underground visibility without impacting the usefulness of blocks such as torches!",
+  "authors": [
+    "andante."
+  ],
+  "contact": {
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/undergroundambientlighting",
+    "sources": "https://github.com/andantedevs/undergroundambientlighting"
+  },
+  "license": "MIT",
+  "icon": "pack.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+        "me.andante.undergroundambientlighting.fabric.client.UALFabricClient"
+    ]
+  },
+  "mixins": [
+    "undergroundambientlighting.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.11",
+    "fabric": "*",
+    "minecraft": "1.17.x"
+  },
+  "custom": {
+    "modmenu": {
+      "links": {
+        "undergroundambientlighting.discord": "https://discord.gg/aqXkvbJ"
+      }
+    }
+  }
+}

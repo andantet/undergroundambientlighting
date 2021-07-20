@@ -1,0 +1,30 @@
+modLoader="javafml"
+loaderVersion="[35,)"
+license="MIT"
+issueTrackerURL="https://github.com/andante/undergroundambientlighting/issues"
+
+[[mods]]
+modId="undergroundambientlighting"
+version="${version}"
+displayName="UndergroundAmbientLighting"
+#updateJSONURL=""
+displayURL="https://github.com/andantedevs/undergroundambientlighting"
+logoFile="pack.png"
+#credits=""
+authors="andante."
+description='''
+Increases the ambient lighting underground very slightly, which unnoticeably increases underground visibility without impacting the usefulness of blocks such as torches!
+'''
+
+[[dependencies.undergroundambientlighting]]
+    modId="forge"
+    mandatory=true
+    versionRange="[35,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.undergroundambientlighting]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.17,)"
+    ordering="NONE"
+    side="BOTH"
