@@ -1,6 +1,8 @@
 package me.andante.undergroundambientlighting.mixin.client;
 
 import me.andante.undergroundambientlighting.client.UALClient;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.LightmapTextureManager;
 import org.spongepowered.asm.mixin.Final;
@@ -9,6 +11,7 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
 
+@Environment(EnvType.CLIENT)
 @Mixin(LightmapTextureManager.class)
 public abstract class LightmapTextureManagerMixin {
     @Shadow @Final private MinecraftClient client;

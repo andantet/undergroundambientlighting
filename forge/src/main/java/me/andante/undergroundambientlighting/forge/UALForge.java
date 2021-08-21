@@ -1,13 +1,14 @@
 package me.andante.undergroundambientlighting.forge;
 
-import me.andante.undergroundambientlighting.UndergroundAmbientLightingCore;
+import me.andante.undergroundambientlighting.UndergroundAmbientLighting;
+import me.andante.undergroundambientlighting.forge.client.UALClientForge;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.common.Mod;
 
-@Mod(UndergroundAmbientLightingCore.MOD_ID)
+@Mod(UndergroundAmbientLighting.MOD_ID)
 public class UALForge {
     public UALForge() {
-        DistExecutor.safeRunWhenOn(Dist.CLIENT, () -> UndergroundAmbientLightingForgeClient::new);
+        DistExecutor.safeRunWhenOn(Dist.CLIENT, () -> UALClientForge::new);
     }
 }

@@ -1,28 +1,28 @@
 package me.andante.undergroundambientlighting.forge.client;
 
-import me.andante.undergroundambientlighting.UndergroundAmbientLightingCore;
-import me.andante.undergroundambientlighting.platform.AbstractPlatform;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.settings.KeyBinding;
+import me.andante.undergroundambientlighting.UndergroundAmbientLighting;
+import me.andante.undergroundambientlighting.client.UALClient;
+import me.andante.undergroundambientlighting.client.platform.AbstractClientPlatform;
+import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.option.KeyBinding;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.event.entity.player.PlayerInteractEvent;
-import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fmlclient.registry.ClientRegistry;
 import org.lwjgl.glfw.GLFW;
 
-public class UALClientForge implements AbstractPlatform {
+public class UALClientForge implements AbstractClientPlatform {
     private static final KeyBinding keyBinding = new KeyBinding(
-            "key." + UndergroundAmbientLightingCore.MOD_ID + ".undergroundambientlighting",
+            "key." + UndergroundAmbientLighting.MOD_ID + "." + UndergroundAmbientLighting.MOD_ID,
             GLFW.GLFW_KEY_I,
-            "key.category." + UndergroundAmbientLightingCore.MOD_ID
+            "key.category." + UndergroundAmbientLighting.MOD_ID
     );
 
-    private UndergroundAmbientLightingCore core;
+    private final UALClient core;
 
     public UALClientForge() {
-        this.core = new UndergroundAmbientLightingCore(this);
+        this.core = new UALClient(this);
 
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::onClientSetup);
         MinecraftForge.EVENT_BUS.addListener(this::onClientTick);
@@ -33,11 +33,11 @@ public class UALClientForge implements AbstractPlatform {
     }
 
     private void onClientTick(final TickEvent.ClientTickEvent event) {
-        this.core.onClientTick(Minecraft.getInstance());
+        this.core.onClientTick(MinecraftClient.getInstance());
     }
 
     @Override
     public boolean isUALKeyPressed() {
-        return keyBinding.isDown();
+        return keyBinding.isPressed();
     }
 }

@@ -1,6 +1,6 @@
 plugins {
-    id "architectury-plugin" version "3.2-SNAPSHOT"
-    id "dev.architectury.loom" version "0.7.2-SNAPSHOT" apply false
+    id "architectury-plugin" version "3.3-SNAPSHOT"
+    id "dev.architectury.loom" version "0.7.4-SNAPSHOT" apply false
 }
 
 architectury {
@@ -36,10 +36,10 @@ allprojects {
     group = rootProject.maven_group
 
     repositories {
-//        maven {
-//            name = "Mod Menu Maven"
-//            url = "https://maven.terraformersmc.com/releases/"
-//        }
+        maven {
+            name = "Mod Menu Maven"
+            url = "https://maven.terraformersmc.com/releases/"
+        }
         maven {
             name = "Dodo Gang Maven Repo"
             url = "http://maven.dodogang.net/releases"

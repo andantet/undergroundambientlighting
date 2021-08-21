@@ -1,22 +1,19 @@
 package me.andante.undergroundambientlighting.client;
 
-import me.andante.undergroundambientlighting.client.platform.AbstractPlatform;
+import me.andante.undergroundambientlighting.UndergroundAmbientLighting;
+import me.andante.undergroundambientlighting.client.platform.AbstractClientPlatform;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Formatting;
 import org.apache.logging.log4j.Level;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
+@Environment(EnvType.CLIENT)
 public class UALClient {
-    public static final String MOD_ID = "undergroundambientlighting";
-    public static final String MOD_NAME = "Underground Ambient Lighting";
-
-    public static final Logger LOGGER = LogManager.getLogger(MOD_ID);
-
-    public static AbstractPlatform platform;
+    public static AbstractClientPlatform platform;
 
     private static boolean enabled = true;
     private static boolean keyWasDown = false;
@@ -25,7 +22,7 @@ public class UALClient {
     private static final TranslatableText TEXT_TOGGLE_ENABLED = new TranslatableText(TEXT_TOGGLE, new TranslatableText(TEXT_TOGGLE + ".enabled").formatted(Formatting.GRAY));
     private static final TranslatableText TEXT_TOGGLE_DISABLED = new TranslatableText(TEXT_TOGGLE, new TranslatableText(TEXT_TOGGLE + ".disabled").formatted(Formatting.GRAY));
 
-    public UALClient(AbstractPlatform platform) {
+    public UALClient(AbstractClientPlatform platform) {
         log("Initializing");
         UALClient.platform = platform;
         log("Initialized");
@@ -54,6 +51,6 @@ public class UALClient {
         log(Level.INFO, message);
     }
     public static void log(Level level, String message) {
-        LOGGER.log(level, "[{}] {}", MOD_NAME, message);
+        UndergroundAmbientLighting.LOGGER.log(level, "[{}] {}", UndergroundAmbientLighting.MOD_NAME, message);
     }
 }
