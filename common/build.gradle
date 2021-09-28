@@ -8,8 +8,12 @@ architectury {
     common()
 }
 
-java {
-    withSourcesJar()
+configurations {
+    dev
+}
+
+artifacts {
+    dev(jar)
 }
 
 publishing {

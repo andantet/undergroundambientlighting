@@ -1,5 +1,5 @@
 modLoader="javafml"
-loaderVersion="[35,)"
+loaderVersion="[37,)"
 license="MIT"
 issueTrackerURL="https://github.com/andante/undergroundambientlighting/issues"
 
@@ -19,7 +19,7 @@ Increases the ambient lighting underground very slightly, which unnoticeably inc
 [[dependencies.undergroundambientlighting]]
     modId="forge"
     mandatory=true
-    versionRange="[35,)"
+    versionRange="[37,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.undergroundambientlighting]]
