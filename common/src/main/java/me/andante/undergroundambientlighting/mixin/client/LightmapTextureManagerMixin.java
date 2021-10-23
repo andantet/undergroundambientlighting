@@ -20,7 +20,7 @@ public abstract class LightmapTextureManagerMixin {
 
     @Inject(method = "getBrightness", at = @At("RETURN"), cancellable = true)
     private void applyUndergroundAmbientLight(World world, int lightLevel, CallbackInfoReturnable<Float> cir) {
-        if (this.client.player != null && UALClient.isEnabled() && lightLevel <= 1) {
+        if (this.client.player != null && UALClient.isEnabled() && lightLevel <= 1 && this.client.player.world.getRegistryKey() == World.OVERWORLD) {
             double playerY = this.client.player.getY();
             int startY = 63;
 
