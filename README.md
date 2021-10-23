@@ -1,5 +1,6 @@
 # Underground Ambient Lighting
-[![](https://cf.way2muchnoise.eu/full_447882_Downloads.svg)](https://www.curseforge.com/minecraft/mc-mods/undergroundambientlighting)
+[![](https://cf.way2muchnoise.eu/full_447882_Downloads_Fabric.svg)](https://www.curseforge.com/minecraft/mc-mods/undergroundambientlighting-fabric)
+[![](https://cf.way2muchnoise.eu/full_539491_Downloads_Forge.svg)](https://www.curseforge.com/minecraft/mc-mods/undergroundambientlighting-forge)
 [![](https://cf.way2muchnoise.eu/versions/447882.svg)](https://www.curseforge.com/minecraft/mc-mods/undergroundambientlighting)
 
 ## What does this mod do?
