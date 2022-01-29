@@ -1,7 +1,7 @@
 {
-    "key.category.undergroundambientlighting": "Underground Ambient Lighting",
-    "key.undergroundambientlighting.undergroundambientlighting": "Toggle Mod",
+    "key.category.undergroundambientlighting": "Illuminazione ambientale sotterranea",
+    "key.undergroundambientlighting.undergroundambientlighting": "Toggle mod",
     "text.undergroundambientlighting.toggle": "[UAL] %s",
-    "text.undergroundambientlighting.toggle.enabled": "Enabled",
-    "text.undergroundambientlighting.toggle.disabled": "Disabled"
+    "text.undergroundambientlighting.toggle.enabled": "Attiva",
+    "text.undergroundambientlighting.toggle.disabled": "Disattiva"
 }
